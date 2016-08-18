@@ -22,18 +22,25 @@
     <script src="//cdn.jsdelivr.net/phaser/2.5.0/phaser.min.js"></script>
 
   <title>hello phaser!</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 <div id="content">
-  <header>
+  <!-- <header>
     <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
     <div id="login-toolbar">
-      <% if current_user %>
+      <% #if current_user %>
         <a href="/logout">Logout</a>
-      <% else %>
+      <% #else %>
         <a href="/login">Login</a>
-      <% end %>
-  </header>
+      <% #end %>
+
+  </header> -->
   <%= yield %>
 </div>
 </body>
