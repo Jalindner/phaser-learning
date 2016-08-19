@@ -142,6 +142,14 @@ $(document).ready(function() {
     $(finalScore).val(timesJumped)
     console.log(finalScore);
     console.log(formData);
+    $.ajax({
+      url: '/submit',
+      type: 'post',
+      data: formData
+    })
+    .done(function() {
+      console.log("success");
+    });
 
   });
 });

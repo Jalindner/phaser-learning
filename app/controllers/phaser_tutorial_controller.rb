@@ -12,5 +12,9 @@ end
 
 post '/submit' do
   lastest_score = Name.save(name: params[:name], timesJumped: params[:timesJumped])
-  redirect '/level1'
+  if request.xhr?
+
+  else
+    redirect '/level1'
+  end
 end
