@@ -6,6 +6,11 @@ get '/level1' do
   erb :'/levels/level1'
 end
 
-get '/level2' do
-  erb :'/levels/level2'
+get '/submit' do
+  erb :'_submit', layout: false
+end
+
+post '/submit' do
+  lastest_score = Name.save(name: params[:name], timesJumped: params[:timesJumped])
+  redirect '/level1'
 end
